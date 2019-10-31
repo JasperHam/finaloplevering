@@ -1,0 +1,609 @@
+.topper {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: white;
+    text-shadow: 5px 5px #000;
+    max-height: 100%;
+    width: 100%;
+
+}
+
+body {
+    margin: 0;
+
+
+}
+
+
+.banner {
+    background-color: black;
+
+}
+
+.imagebanner {
+    max-height: 100%;
+    width: 100%;
+
+}
+
+
+p {
+    color: white;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    font-family: impact;
+    margin: 1em;
+}
+
+/* navigatie vorm geving */
+nav {
+    background: black;
+
+}
+
+/*door list type none staat het naast elkaar en niet onder elkaar*/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    color: darkgrey;
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+
+
+}
+
+
+nav a:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+
+
+}
+
+/*hier mee highlight je de het nav element waar je over hoverd en de rest blurred*/
+
+nav ul:hover li a {
+    filter: blur(5px);
+}
+
+nav ul li a:hover {
+    filter: blur(0px);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-family: impact;
+    color: white;
+    text-shadow: 1px 1px #000;
+    margin: 0.3em;
+
+
+}
+
+.tweede {
+    font-size: 2em;
+    color: white;
+    text-shadow: 1px 1px #000;
+}
+
+
+/* custom audio player*/
+.audioPlayer {
+    width: 31.25em;
+    height: 31.25em;
+    background-image: url(images/What.png);
+    background-size: cover;
+    position: relative;
+}
+
+.audioPlayer audio {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 75%;
+}
+
+/*https://stackoverflow.com/questions/37452293/how-to-design-customized-audio-player-with-html/37738603*/
+
+.main {
+    width: 100%;
+    background-color: darkgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    transition: 0.3s;
+}
+
+.main:hover {
+    transform: scale(1.02);
+}
+
+.jappie-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.what-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.whatnow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.onderste {
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    transition: 0.3s;
+}
+
+p.onderstetwee {
+    color: white;
+    display: flex;
+    text-align: center;
+    font-family: impact, charco;
+    margin: 1em;
+}
+
+.jappie {
+    width: 30em;
+    height: 17.5em;
+    display: flex;
+    margin-right: 2em;
+    margin-bottom: 1em;
+
+}
+
+.design {
+    width: 100%;
+    background-color: lightgrey;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    transition: 0.3s;
+
+}
+
+.design:hover {
+    transform: scale(1.02);
+}
+
+/* CSS animation values for JS interaction. Y/X axis for direction it should move*/
+
+.designanimation {
+    animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    transform: translateX(0);
+}
+
+.mediaanimation {
+    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    transform: translateX(0);
+}
+
+.fashionanimation {
+    animation: slide-up 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    transform: translateY(0);
+}
+
+.musicanimation {
+    animation: slide-down 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    transform: translateY(0);
+}
+
+/*https://stackoverflow.com/questions/13054060/how-to-implement-a-sliding-animation-in-javascript-correctly*/
+
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+
+.jimbo {
+    width: 400px;
+    height: 250px;
+    margin-left: 2em;
+    margin-bottom: 1em;
+
+}
+
+/* plaats de twee onderwerpen fashion en music naast elkaar*/
+.swipe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+
+/* MEDIA PAGE LAYOUT*/
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0;
+}
+
+/*om de 4 columns naast elkaar te krijgen, kies hier hier voor de display grid*/
+/*omdat ik wil dat alles direct op elkaar aansluit kiez in voor 0 margin-top*/
+.column img {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    transition: 2s;
+}
+
+.column img:hover {
+    transform: rotateY(360deg);
+}
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: darkgrey;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #000;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 0%;
+    background-color: darkgrey;
+    padding: 20px;
+}
+
+/* https://alligator.io/css/css-grid-layout-fr-unit/ */
+
+/*SOURCE https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp*/
+
+
+
+#interest {
+    background-color: darkgrey;
+    margin: 0;
+    padding-top: 1em;
+}
+
+
+.canvas-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-content: center;
+}
+
+.canvas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.fashion {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: lightslategrey;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.trui-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.trui {
+    width: 100%;
+    height: 100%;
+
+}
+
+.music:hover {
+    transform: scale(1.02);
+
+}
+
+.music {
+    width: 100%;
+    height: 50%;
+    background-color: lightslategrey;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: 0.3s;
+
+
+}
+
+.fashion:hover {
+    transform: scale(1.02);
+}
+
+/* radio filter form (not working)*/
+
+
+#all:checked ~ article {
+    display: block;
+}
+
+#cartoon:checked ~ article:not(.cartoonone),
+#design:checked ~ article:not(.designone),
+#music:checked ~ article:not(.musicone),
+#fashion:checked ~ aricle:not(.fashionone) {
+    display: none;
+}
+
+/* checkt of id short gecheckt is, tilde kijkt naar volende artikel, broer of zus, selecteerd alle articles niet "not short" zijn door ze weg te halen */
+
+input[type="radio"] {
+    position: absolute;
+    display: none;
+}
+
+/* bron: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
+*/
+
+.filter {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: darkgrey;
+    border: none;
+}
+
+/* grid column kijkt naar de kolommen en kijkt naar 2 ipv 1 */
+
+.filter label {
+    font-family: impact;
+    color: white;
+    text-shadow: 1px 1px #000;
+    cursor: pointer;
+    margin: 2em;
+}
+
+.filter label:hover {
+    color: black;
+    text-shadow: 1px 1px #fff;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    font-family: impact;
+    color: white;
+    text-shadow: 1px 1px #000;
+    margin: 0;
+}
+
+
+/*responsive maken van de nav bar wanneer scherm groter wordt*/
+
+@media screen and (min-width: 600px) {
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    p {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    p {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 0em;
+    }
+}
+
+
+
+
+
+/* content responsive maken wanneer scherm krimpt*/
+
+@media (max-width: 600px) {
+    .eerste {
+        display: none;
+    }
+
+
+
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+    .jappie-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .jappie {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .design {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .music {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+
+    h1 {
+        position: absolute;
+        top: 50%;
+        margin: 0;
+    }
+
+    #interest {
+        z-index: 1;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: start;
+        align-content: center;
+        margin: 0;
+    }
+
+    .jimbo {
+        margin: 0;
+        height: 100%;
+        width: 100%
+    }
+
+    .canvas-container {
+        display: flex;
+        justify-content: start;
+        align-content: center;
+        margin: 0;
+
+    }
+
+
+    .canvas {
+        margin: 0;
+        height: 100%;
+        width: 100%
+    }
+
+    .fashion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+    .fashion h1 {
+        z-index: 2;
+    }
+}
+
+.trui-container {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    margin: 0;
+}
+
+.trui {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+#interest {
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}

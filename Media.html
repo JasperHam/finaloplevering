@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head lang="en">
+    <meta chartset="utf-8" />
+    <title> My Page </title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+    <div class="banner">
+        <img class="imagebanner" src="images/jasper.jpeg">
+    </div>
+
+    <nav>
+        <ul>
+
+            <li> <a href="index.html"> Home </a></li>
+            <li> <a href="Media.html"> Media </a></li>
+            <li> <a href="contact.html"> Contact </a></li>
+        </ul>
+    </nav>
+
+
+    <!--    Formulier source: Vincent -->
+
+    <form class="filter">
+        <fieldset>
+            <label tabindex="0" for="short">
+                Cartoon
+            </label>
+            <label tabindex="0" for="middle">
+                Design
+            </label>
+            <label tabindex="0" for="long">
+                Music
+            </label>
+            <label tabindex="0" for="long">
+                Fashion
+            </label>
+        </fieldset>
+    </form>
+
+    <input type="radio" name="length" id="all" checked>
+    <input type="radio" name="length" id="cartoon">
+    <input type="radio" name="length" id="design">
+    <input type="radio" name="length" id="music">
+    <input type="radio" name="length" id="fashion">
+
+    <!--   Deze eerste articles staan er om heen om zo hopelijk de css filter aan te spreken, maar lukt nog niet-->
+    <section class="row">
+        <div class="column">
+            <article class="cartoonone">
+                <img src="images/Davy.png" class="cartoonone">
+            </article>
+            <article class="designone">
+                <img src="images/jimbo.png" class="designonone">
+            </article>
+            <article class="musicone">
+                <img src="images/fine.png" class="musicone">
+            </article>
+            <article class="fashionone">
+                <img src="images/trui.png" class="fashionone">
+            </article>
+            <article class="designone">
+                <img src="images/Velp2.png" class="designonone">
+            </article>
+            <article class="cartoonone">
+                <img src="images/sneaker.jpg" class="cartoonone">
+            </article>
+        </div>
+        <div class="column">
+            <a href="detail.html">
+                <img src="images/What.png" class="musicone">
+            </a>
+            <img src="images/maartje.jpg" class="cartoonone">
+            <img src="images/Velp1.png" class="designonone">
+            <img src="images/trui1.png" class="fashionone">
+        </div>
+        <div class="column">
+            <img src="images/trui2.png" class="fashionone">
+            <img src="images/her.jpg" class="musicone">
+            <img src="images/Japster.png" class="cartoonone">
+            <img src="images/butlerblack.jpg" class="designonone">
+            <img src="images/MonaAdd.png" class="cartoonone">
+        </div>
+        <div class="column">
+            <img src="images/dont.png" class="musicone">
+            <img src="images/trui3.png" class="fashionone">
+            <img src="images/Soof8.png" class="cartoonone">
+            <img src="images/departmentwhite.jpg" class="designonone">
+            <img src="images/trui4.png" class="fashionone">
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+</body>
+
+
+
+
+
+
+
+
+
+</html>
